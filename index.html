@@ -357,6 +357,11 @@
 
 <script>
   var WA = "5571991684231"; // (71) 99168-4231
+  // Apex passou a servir a landing: remove qualquer service worker/cache do sistema antigo nesta origem.
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); }).catch(function(){});
+    if (window.caches && caches.keys) { caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); }).catch(function(){}); }
+  }
   document.getElementById('yr').textContent = new Date().getFullYear();
 
   // WhatsApp base link
