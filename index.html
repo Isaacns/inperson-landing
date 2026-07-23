@@ -22,7 +22,7 @@
   :root{
     --bg:#010510; --bg2:#04101f; --bg3:#061528;
     --accent:#74B0D8; --accent2:#5B9BC4; --accent3:#6FA8DC; --ice:#cfe6f5;
-    --txt:#FAFAFA; --muted:#9fb2c6; --faint:#5f7186;
+    --txt:#FAFAFA; --muted:#9fb2c6; --faint:#7186a0;
     --glass-bg:rgba(255,255,255,.04); --glass-bg2:rgba(116,176,216,.05);
     --glass-brd:rgba(116,176,216,.16); --glass-brd2:rgba(116,176,216,.32);
     --ok:#5FBF8F; --maxw:1180px; --r:20px;
@@ -70,7 +70,7 @@
   .accent{color:var(--accent)}
   .grad-txt{background:linear-gradient(110deg,#cfe6f5,#74B0D8 45%,#5B9BC4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 28px;font-size:15px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:.22s;font-family:inherit;position:relative;overflow:hidden}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 28px;font-size:15px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:.22s;font-family:inherit;position:relative;overflow:hidden;white-space:nowrap;min-height:44px}
   .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#041020;box-shadow:0 8px 26px rgba(116,176,216,.28)}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(116,176,216,.42)}
   .btn-primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:.6s}
@@ -89,7 +89,7 @@
   .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--accent);transition:.25s}
   .nav-links a:hover{color:var(--txt)}.nav-links a:hover::after{width:100%}
   .nav-cta{display:flex;gap:12px;align-items:center}
-  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:0}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:14px 10px;background:none;border:0;justify-content:center;min-width:44px;min-height:44px;align-items:center}
   .burger span{width:24px;height:2px;background:var(--txt);transition:.3s;border-radius:2px}
   @media(max-width:940px){.nav-links{display:none}.nav-cta .btn-ghost{display:none}.burger{display:flex}}
   /* drawer mobile */
@@ -97,7 +97,7 @@
   .drawer.open{opacity:1;pointer-events:auto}
   .drawer a{font-size:21px;color:var(--muted);font-weight:300}
   .drawer a:hover{color:var(--accent)}
-  .drawer .close{position:absolute;top:24px;right:26px;font-size:28px;color:var(--muted);cursor:pointer;background:none;border:0}
+  .drawer .close{position:absolute;top:16px;right:16px;font-size:28px;color:var(--muted);cursor:pointer;background:none;border:0;padding:10px 14px;min-width:48px;min-height:48px;line-height:1}
 
   /* ===== HERO ===== */
   .hero{padding:104px 0 78px;position:relative;text-align:center}
@@ -222,6 +222,28 @@
   .whats-float:hover{transform:scale(1.09)}
   .whats-float svg{width:30px;height:30px}
 
+  /* ===== refinamento mobile (premium) ===== */
+  @media(max-width:640px){
+    .nav-cta .btn-primary{display:none}
+    .nav-in{height:64px}
+    .brand img{height:30px}
+    section{padding:64px 0}
+    .hero{padding:84px 0 60px}
+    .hero-mark{width:88px;height:88px;margin-bottom:20px}
+    .hero .eyebrow{letter-spacing:3px;font-size:11px}
+    .hero p.lead{margin-bottom:30px}
+    .hero-ctas{flex-direction:column;align-items:stretch;max-width:340px;margin:0 auto}
+    .scroll-cue{margin-top:42px}
+    .sec-head{margin-bottom:40px}
+    .trust{gap:12px;margin-top:48px}
+    .card{padding:24px 22px}
+    .sobre .lockup{padding:34px 26px}
+    .eco{padding:32px 22px;border-radius:20px}
+    .plan{padding:28px 22px}
+    .cta-box{padding:44px 22px;border-radius:22px}
+    .foot-links{gap:14px}
+    .whats-float{right:16px;bottom:16px}
+  }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.001s!important}.fade{opacity:1;transform:none}}
 </style>
 </head>
