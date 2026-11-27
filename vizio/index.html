@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIZIO · Sua planilha virou software | um produto INPERSON</title>
+<meta name="description" content="A VIZIO, estúdio de software da INPERSON em Salvador/BA, transforma a planilha da sua operação em sistema: sob medida, no celular e no computador, com a equipe treinada.">
+<meta name="theme-color" content="#06080F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --blue:#1C64F0;--blue-hi:#3C94FC;--blue-press:#1450C8;--blue-50:#EAF1FE;
+  --ink:#0E1726;--s700:#1F2B40;--s600:#3A475C;--s500:#5B6781;--s300:#C4CCD8;--s200:#E4E9F0;
+  --bg:#F6F8FC;--white:#fff;
+  --pbg:#06080F;--psurf:#0E1422;--pborder:#1C2740;--ptext:#E8EEF8;--pmuted:#8A94A6;
+  --font:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  --gut:16px;--max:1120px;
+}
+[hidden]{display:none!important}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);font-size:1rem;line-height:1.6;color:var(--ink);background:var(--bg);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:10px;border:1.5px solid transparent;font:600 1rem/1.2 var(--font);text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,transform .2s,color .2s;text-align:center}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-hi)}
+.btn-primary:active{background:var(--blue-press);transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--ptext);border-color:rgba(60,148,252,.45)}
+.btn-ghost:hover{border-color:var(--blue-hi);color:#fff}
+.btn-ghost:active{background:rgba(60,148,252,.14)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--blue-hi);outline-offset:3px;border-radius:8px}
+.white a:focus-visible,.white .btn:focus-visible{outline-color:var(--blue)}
+
+.top{position:sticky;top:0;z-index:20;background:rgba(6,8,15,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--pborder)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px;color:#fff}
+.brand svg{height:32px;width:auto}
+.brand b{font-weight:800;letter-spacing:.12em;font-size:1.25rem;line-height:1;color:#fff}
+.nav{display:flex;align-items:center;gap:4px}
+.nav .lnk{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;color:var(--pmuted);text-decoration:none;font-weight:500;font-size:.9375rem;border-radius:8px;transition:color .2s}
+.nav .lnk:hover{color:#fff}
+.nav .lnk:active{color:var(--blue-hi)}
+.nav .btn{min-height:44px;padding:8px 14px;font-size:.9375rem}
+.hide-sm{display:none}
+
+section{padding:72px 0}
+section[id]{scroll-margin-top:63px}
+.dark{background:var(--pbg);color:var(--ptext)}
+.light{background:var(--bg);color:var(--ink)}
+.white{background:var(--white);color:var(--ink)}
+.kicker{display:block;font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.dark .kicker{color:var(--blue-hi)}
+h2{font-size:clamp(1.625rem,5.4vw,2.375rem);line-height:1.15;font-weight:700;letter-spacing:-.02em;max-width:24ch}
+.lede{margin-top:16px;max-width:60ch;color:var(--s600);font-size:1.0625rem}
+.dark .lede{color:var(--pmuted)}
+.head{margin-bottom:40px}
+
+.hero{position:relative;padding:72px 0 84px;background:radial-gradient(120% 80% at 70% 0%,#11367f 0%,var(--pbg) 72%)}
+.hero-sym{display:none}
+.hero .wrap{position:relative;z-index:1}
+@keyframes rise{from{transform:translateY(12px)}to{transform:none}}
+@media (prefers-reduced-motion:no-preference){.js .hero .wrap>*{animation:rise .6s ease backwards;animation-delay:var(--d,0s)}}
+.hero .tag{display:inline-block;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--pmuted)}
+h1{margin-top:20px;font-size:clamp(2.25rem,10.5vw,4.5rem);line-height:1.04;font-weight:800;letter-spacing:-.03em;color:#fff;max-width:14ch}
+.rule{width:60px;height:2px;background:var(--blue-hi);margin:28px 0 24px}
+.hero p.sub{max-width:52ch;font-size:1.125rem;color:#9fb4d8}
+.hero .ctas{display:flex;flex-direction:column;gap:12px;margin-top:36px}
+.hero .by{margin-top:44px;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--pmuted)}
+
+.grid{display:grid;gap:16px}
+.fr{grid-template-columns:1fr}
+.card{border-radius:16px;padding:24px}
+.light .card{background:#fff;border:1px solid var(--s200);box-shadow:0 2px 12px rgba(14,23,38,.05)}
+.ic{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:var(--blue-50);color:var(--blue);margin-bottom:16px}
+.ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+h3{font-size:1.1875rem;line-height:1.3;font-weight:700;letter-spacing:-.01em}
+.card p{margin-top:8px;color:var(--s600);font-size:.9688rem}
+
+.pr{grid-template-columns:1fr}
+.dark .card{background:var(--psurf);border:1px solid var(--pborder)}
+.dark .card h3{color:#fff}
+.dark .card p{color:var(--pmuted)}
+.pr .for{margin-top:6px;font-size:.8125rem;font-weight:600;letter-spacing:.02em;color:var(--blue-hi);line-height:1.45}
+.pr .card p{margin-top:12px}
+
+.cs{grid-template-columns:1fr}
+.case .who{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.case h3{font-size:1.25rem}
+.case ul{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.case li{font-size:.8125rem;font-weight:500;color:var(--s700);background:var(--blue-50);border-radius:999px;padding:6px 12px}
+
+.st{grid-template-columns:1fr;counter-reset:st}
+.step{position:relative;padding:28px 24px;border-radius:16px;background:var(--psurf);border:1px solid var(--pborder)}
+.step::before{counter-increment:st;content:counter(st);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--blue-hi);color:var(--blue-hi);font-weight:700;margin-bottom:18px}
+.step h3{color:#fff}
+.step p{margin-top:8px;color:var(--pmuted);font-size:.9688rem}
+
+.guide{display:grid;gap:28px;align-items:center;grid-template-columns:1fr;background:var(--bg);border:1px solid var(--s200);border-radius:20px;padding:28px 24px}
+.guide h2{font-size:clamp(1.5rem,5vw,2rem);max-width:22ch}
+.guide p{margin-top:12px;color:var(--s600);max-width:52ch}
+.guide .btn{margin-top:24px}
+.sheet{display:none}
+
+.final{text-align:center;background:radial-gradient(90% 90% at 50% 0%,#11367f 0%,var(--pbg) 70%)}
+.final h2{margin:0 auto;max-width:18ch}
+.final .lede{margin-left:auto;margin-right:auto}
+.final .ctas{display:flex;flex-direction:column;gap:12px;margin:32px auto 0;max-width:360px}
+footer{background:var(--pbg);color:var(--pmuted);border-top:1px solid var(--pborder);padding:40px 0 48px}
+footer .wrap{display:flex;flex-direction:column;gap:20px}
+footer .brand svg{height:36px}
+footer p{font-size:.875rem}
+footer .links{display:flex;flex-wrap:wrap;gap:4px 16px}
+footer .links a{display:inline-flex;align-items:center;min-height:44px;color:var(--ptext);text-decoration:none;font-weight:500;font-size:.9375rem}
+footer .links a:hover{color:var(--blue-hi)}
+footer .links a:active{color:#fff}
+footer .sig{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pmuted)}
+
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+@media (min-width:480px){.hide-sm{display:inline}}
+@media (min-width:640px){
+  :root{--gut:28px}
+  .fr,.pr{grid-template-columns:repeat(2,1fr)}
+  .hero .ctas,.final .ctas{flex-direction:row}
+  .final .ctas{max-width:none;justify-content:center}
+  .guide{padding:40px}
+}
+@media (min-width:900px){
+  section{padding:104px 0}
+  .hero{padding:120px 0 128px;overflow:hidden}
+  .hero-sym{display:block;position:absolute;right:max(5%,calc((100vw - var(--max)) / 2 + 40px));top:50%;transform:translateY(-50%);width:min(280px,24vw);opacity:.92}
+  .hero-sym svg{width:100%;height:auto}
+  .fr{grid-template-columns:repeat(4,1fr)}
+  .cs,.st{grid-template-columns:repeat(3,1fr)}
+  .guide{grid-template-columns:1.4fr 1fr;padding:48px 56px;gap:48px}
+  .sheet{display:block;justify-self:center;width:100%;max-width:240px;aspect-ratio:3/4;border-radius:14px;background:linear-gradient(160deg,#11367f,#06080F);border:1px solid var(--pborder);padding:28px;color:#fff}
+  .sheet i{display:block;height:8px;border-radius:4px;background:rgba(255,255,255,.14);margin-top:12px}
+  .sheet b{display:block;font-size:2.75rem;line-height:1;font-weight:800;color:var(--blue-hi);margin-bottom:8px}
+  .sheet span{display:block;margin-bottom:20px;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:#9fb4d8}
+}
+@media (min-width:1024px){
+  .pr{grid-template-columns:repeat(4,1fr)}
+  :root{--gut:32px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="VIZIO, início da página">
+      <svg viewBox="0 0 128 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="ag" x1="64" y1="20" x2="104" y2="118" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8FC2FF"/><stop offset=".5" stop-color="#3C94FC"/><stop offset="1" stop-color="#1C64F0"/></linearGradient></defs><path d="M 48.08,137.35 L 48.08,138.58 L 50.38,140.74 L 51.69,140.90 L 52.18,141.67 L 55.14,142.75 L 57.44,144.44 L 58.58,144.60 L 59.08,145.37 L 60.55,145.52 L 61.05,146.30 L 62.69,146.60 L 66.30,146.30 L 68.59,144.60 L 69.74,144.44 L 70.24,143.67 L 71.55,143.52 L 72.04,142.75 L 76.64,140.74 L 78.93,138.73 L 78.93,136.42 L 77.46,134.88 L 75.16,134.88 L 69.25,138.43 L 67.77,138.73 L 67.28,139.51 L 66.30,139.51 L 65.48,140.43 L 64.33,140.59 L 61.54,140.43 L 57.44,137.81 L 56.29,137.65 L 55.79,136.88 L 54.48,136.73 L 53.66,135.80 L 52.68,135.80 L 51.86,134.88 L 49.89,135.03 Z" fill="#3C94FC"/><path d="M 3.94,111.11 L 2.79,113.12 L 2.79,114.66 L 4.27,116.67 L 5.42,116.82 L 6.24,117.75 L 10.50,119.60 L 10.99,120.37 L 12.31,120.52 L 14.93,122.38 L 15.92,122.38 L 18.22,124.07 L 19.36,124.23 L 19.86,125.00 L 21.17,125.15 L 21.66,125.93 L 26.26,127.93 L 27.08,128.86 L 28.06,128.86 L 28.55,129.63 L 29.87,129.78 L 30.85,130.71 L 33.31,130.86 L 35.45,129.32 L 35.45,127.01 L 34.30,125.77 L 32.98,125.62 L 27.24,122.07 L 24.12,120.99 L 23.63,120.22 L 22.48,120.06 L 20.35,118.36 L 19.04,118.21 L 18.54,117.44 L 13.78,115.28 L 13.29,114.51 L 12.14,114.51 L 11.65,113.73 L 7.06,111.73 L 6.56,110.96 Z" fill="#3C94FC"/><path d="M 48.57,102.47 L 48.90,104.17 L 50.22,105.56 L 51.69,105.71 L 53.83,107.41 L 55.14,107.56 L 55.63,108.33 L 56.94,108.49 L 57.44,109.26 L 58.75,109.41 L 59.24,110.19 L 60.55,110.34 L 61.21,111.27 L 62.36,111.27 L 63.34,112.04 L 66.30,111.11 L 68.59,109.41 L 69.58,109.41 L 70.24,108.49 L 71.55,108.33 L 72.04,107.56 L 73.35,107.41 L 73.68,106.79 L 76.64,105.56 L 78.93,103.24 L 78.77,101.39 L 76.96,99.69 L 75.16,99.69 L 69.25,103.24 L 65.97,104.48 L 65.48,105.25 L 64.33,105.40 L 61.87,105.25 L 61.37,104.48 L 60.23,104.32 L 59.73,103.55 L 58.42,103.40 L 57.93,102.62 L 56.62,102.47 L 55.79,101.54 L 54.81,101.54 L 54.15,100.77 L 52.68,100.46 L 52.02,99.69 L 50.22,99.85 L 49.07,100.93 Z" fill="#3C94FC"/><path d="M 3.77,77.78 L 2.95,80.09 L 4.10,82.41 L 5.42,82.56 L 5.91,83.33 L 7.22,83.49 L 11.16,86.11 L 14.28,87.19 L 14.77,87.96 L 17.56,89.04 L 18.05,89.81 L 21.01,90.90 L 24.78,93.52 L 26.09,93.67 L 26.58,94.44 L 27.90,94.60 L 32.00,97.22 L 34.79,97.38 L 36.43,95.99 L 36.43,93.36 L 34.13,91.51 L 29.70,89.51 L 29.21,88.73 L 27.90,88.58 L 25.27,86.73 L 24.29,86.73 L 22.15,85.03 L 20.84,84.88 L 20.35,84.10 L 17.39,83.02 L 15.26,81.33 L 12.31,80.25 L 11.49,79.32 L 10.34,79.17 L 6.40,76.70 L 5.09,76.70 Z" fill="#3C94FC"/><path d="M 2.79,39.04 L 2.79,56.02 L 4.10,57.41 L 7.88,56.94 L 8.53,45.68 L 10.01,45.52 L 46.93,65.74 L 50.22,63.73 L 50.22,61.42 L 48.90,60.03 L 38.73,55.25 L 7.38,37.65 L 5.09,37.35 Z" fill="#3C94FC"/><path d="M 124.06,111.88 L 122.75,110.80 L 120.45,110.96 L 92.88,125.93 L 91.41,127.47 L 91.73,129.94 L 93.54,131.48 L 95.02,131.48 L 121.60,117.44 L 124.06,115.28 Z" fill="url(#ag)"/><path d="M 124.06,77.93 L 122.75,76.70 L 120.78,76.70 L 94.19,90.74 L 90.58,93.21 L 90.58,96.14 L 92.55,97.84 L 93.70,97.84 L 121.76,83.33 L 124.06,81.48 Z" fill="url(#ag)"/><path d="M 123.90,38.12 L 122.09,36.88 L 120.62,37.04 L 81.39,58.18 L 76.80,61.27 L 76.80,64.20 L 78.44,65.74 L 80.08,65.74 L 116.68,45.99 L 118.15,46.14 L 118.65,56.48 L 120.62,57.87 L 123.08,57.41 L 124.23,55.86 Z" fill="url(#ag)"/><path d="M 23.14,25.46 L 23.63,28.24 L 26.58,29.48 L 60.23,11.27 L 64.66,10.03 L 101.58,29.48 L 105.03,27.16 L 104.04,24.07 L 64.82,3.40 L 62.03,3.55 L 25.44,23.15 Z" fill="url(#ag)"/></svg>
+      <b>VIZIO</b>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="lnk" href="https://inpersonaltec.com.br/">INPERSON</a>
+      <a class="btn btn-primary" href="https://wa.me/5571991684231?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20VIZIO%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><span><span class="hide-sm">Falar no </span>WhatsApp</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero dark" aria-labelledby="t-hero">
+  <div class="hero-sym" aria-hidden="true"><svg viewBox="0 0 128 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="cg" x1="64" y1="20" x2="104" y2="118" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8FC2FF"/><stop offset=".5" stop-color="#3C94FC"/><stop offset="1" stop-color="#1C64F0"/></linearGradient></defs><path d="M 48.08,137.35 L 48.08,138.58 L 50.38,140.74 L 51.69,140.90 L 52.18,141.67 L 55.14,142.75 L 57.44,144.44 L 58.58,144.60 L 59.08,145.37 L 60.55,145.52 L 61.05,146.30 L 62.69,146.60 L 66.30,146.30 L 68.59,144.60 L 69.74,144.44 L 70.24,143.67 L 71.55,143.52 L 72.04,142.75 L 76.64,140.74 L 78.93,138.73 L 78.93,136.42 L 77.46,134.88 L 75.16,134.88 L 69.25,138.43 L 67.77,138.73 L 67.28,139.51 L 66.30,139.51 L 65.48,140.43 L 64.33,140.59 L 61.54,140.43 L 57.44,137.81 L 56.29,137.65 L 55.79,136.88 L 54.48,136.73 L 53.66,135.80 L 52.68,135.80 L 51.86,134.88 L 49.89,135.03 Z" fill="#3C94FC"/><path d="M 3.94,111.11 L 2.79,113.12 L 2.79,114.66 L 4.27,116.67 L 5.42,116.82 L 6.24,117.75 L 10.50,119.60 L 10.99,120.37 L 12.31,120.52 L 14.93,122.38 L 15.92,122.38 L 18.22,124.07 L 19.36,124.23 L 19.86,125.00 L 21.17,125.15 L 21.66,125.93 L 26.26,127.93 L 27.08,128.86 L 28.06,128.86 L 28.55,129.63 L 29.87,129.78 L 30.85,130.71 L 33.31,130.86 L 35.45,129.32 L 35.45,127.01 L 34.30,125.77 L 32.98,125.62 L 27.24,122.07 L 24.12,120.99 L 23.63,120.22 L 22.48,120.06 L 20.35,118.36 L 19.04,118.21 L 18.54,117.44 L 13.78,115.28 L 13.29,114.51 L 12.14,114.51 L 11.65,113.73 L 7.06,111.73 L 6.56,110.96 Z" fill="#3C94FC"/><path d="M 48.57,102.47 L 48.90,104.17 L 50.22,105.56 L 51.69,105.71 L 53.83,107.41 L 55.14,107.56 L 55.63,108.33 L 56.94,108.49 L 57.44,109.26 L 58.75,109.41 L 59.24,110.19 L 60.55,110.34 L 61.21,111.27 L 62.36,111.27 L 63.34,112.04 L 66.30,111.11 L 68.59,109.41 L 69.58,109.41 L 70.24,108.49 L 71.55,108.33 L 72.04,107.56 L 73.35,107.41 L 73.68,106.79 L 76.64,105.56 L 78.93,103.24 L 78.77,101.39 L 76.96,99.69 L 75.16,99.69 L 69.25,103.24 L 65.97,104.48 L 65.48,105.25 L 64.33,105.40 L 61.87,105.25 L 61.37,104.48 L 60.23,104.32 L 59.73,103.55 L 58.42,103.40 L 57.93,102.62 L 56.62,102.47 L 55.79,101.54 L 54.81,101.54 L 54.15,100.77 L 52.68,100.46 L 52.02,99.69 L 50.22,99.85 L 49.07,100.93 Z" fill="#3C94FC"/><path d="M 3.77,77.78 L 2.95,80.09 L 4.10,82.41 L 5.42,82.56 L 5.91,83.33 L 7.22,83.49 L 11.16,86.11 L 14.28,87.19 L 14.77,87.96 L 17.56,89.04 L 18.05,89.81 L 21.01,90.90 L 24.78,93.52 L 26.09,93.67 L 26.58,94.44 L 27.90,94.60 L 32.00,97.22 L 34.79,97.38 L 36.43,95.99 L 36.43,93.36 L 34.13,91.51 L 29.70,89.51 L 29.21,88.73 L 27.90,88.58 L 25.27,86.73 L 24.29,86.73 L 22.15,85.03 L 20.84,84.88 L 20.35,84.10 L 17.39,83.02 L 15.26,81.33 L 12.31,80.25 L 11.49,79.32 L 10.34,79.17 L 6.40,76.70 L 5.09,76.70 Z" fill="#3C94FC"/><path d="M 2.79,39.04 L 2.79,56.02 L 4.10,57.41 L 7.88,56.94 L 8.53,45.68 L 10.01,45.52 L 46.93,65.74 L 50.22,63.73 L 50.22,61.42 L 48.90,60.03 L 38.73,55.25 L 7.38,37.65 L 5.09,37.35 Z" fill="#3C94FC"/><path d="M 124.06,111.88 L 122.75,110.80 L 120.45,110.96 L 92.88,125.93 L 91.41,127.47 L 91.73,129.94 L 93.54,131.48 L 95.02,131.48 L 121.60,117.44 L 124.06,115.28 Z" fill="url(#cg)"/><path d="M 124.06,77.93 L 122.75,76.70 L 120.78,76.70 L 94.19,90.74 L 90.58,93.21 L 90.58,96.14 L 92.55,97.84 L 93.70,97.84 L 121.76,83.33 L 124.06,81.48 Z" fill="url(#cg)"/><path d="M 123.90,38.12 L 122.09,36.88 L 120.62,37.04 L 81.39,58.18 L 76.80,61.27 L 76.80,64.20 L 78.44,65.74 L 80.08,65.74 L 116.68,45.99 L 118.15,46.14 L 118.65,56.48 L 120.62,57.87 L 123.08,57.41 L 124.23,55.86 Z" fill="url(#cg)"/><path d="M 23.14,25.46 L 23.63,28.24 L 26.58,29.48 L 60.23,11.27 L 64.66,10.03 L 101.58,29.48 L 105.03,27.16 L 104.04,24.07 L 64.82,3.40 L 62.03,3.55 L 25.44,23.15 Z" fill="url(#cg)"/></svg></div>
+  <div class="wrap">
+    <span class="tag" style="--d:0">VIZIO · estúdio de software</span>
+    <h1 id="t-hero" style="--d:.08s">Sua planilha virou software.</h1>
+    <div class="rule" style="--d:.15s" aria-hidden="true"></div>
+    <p class="sub" style="--d:.2s">O conforto da planilha que você já conhece, com a robustez de um sistema: controle, segurança e clareza para a sua operação, com acesso por perfil, relatórios e dados na nuvem.</p>
+    <div class="ctas" style="--d:.3s">
+      <a class="btn btn-primary" href="https://wa.me/5571991684231?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20VIZIO%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn-ghost" href="#faz">Ver o que a VIZIO faz</a>
+    </div>
+    <p class="by" style="--d:.4s">um produto INPERSON</p>
+  </div>
+</section>
+
+<section id="faz" class="light" aria-labelledby="t-faz">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker">O que a VIZIO faz</span>
+      <h2 id="t-faz">Quatro frentes, um objetivo: a sua operação rodando com clareza.</h2>
+      <p class="lede">Empresa boa encontra software que se encaixa no jeito dela trabalhar. A VIZIO desenha esse encaixe.</p>
+    </div>
+    <div class="grid fr">
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 18v3"/></svg></div>
+        <h3>Sistemas e aplicativos sob medida</h3>
+        <p>Gestão de clientes, ordens de serviço, financeiro e agenda, desenhados para o jeito que a sua operação funciona.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></div>
+        <h3>Sites e landing pages</h3>
+        <p>Presença digital rápida e elegante, pensada para ser encontrada e para transformar visitas em conversas.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h12M12 4l4 4-4 4M20 16H8M12 12l-4 4 4 4"/></svg></div>
+        <h3>Automações e integrações</h3>
+        <p>Tarefas repetitivas resolvidas e sistemas conversando entre si, com os dados fluindo direto de um para o outro.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></svg></div>
+        <h3>Agentes de IA</h3>
+        <p>Atendimento, triagem, relatórios e análises que consumiam horas passam a chegar prontos para a sua equipe.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="produtos" class="dark" aria-labelledby="t-prod">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker">Produtos VIZIO</span>
+      <h2 id="t-prod">Sistemas prontos para o seu setor.</h2>
+      <p class="lede">Cada produto nasceu de uma rotina real de trabalho e chega pronto para o dia a dia de quem usa.</p>
+    </div>
+    <div class="grid pr">
+      <article class="card rv"><h3>Formaturas</h3><p class="for">Para estúdios de fotografia de formaturas</p><p>Reúne turmas, formandos, financeiro e cobrança em um só lugar, com portal para o formando.</p></article>
+      <article class="card rv"><h3>Consórcio</h3><p class="for">Para consultorias e gestores de consórcio</p><p>Organiza a carteira de cotas e clientes, as parcelas e a agenda, e entrega ao cliente final um portal para acompanhar o próprio processo.</p></article>
+      <article class="card rv"><h3>Financiamento</h3><p class="for">Para quem financia um imóvel</p><p>Transforma a planilha do financiamento em um sistema com simulador de amortização e relatórios em PDF.</p></article>
+      <article class="card rv"><h3>Ateliê Manager</h3><p class="for">Para ateliês de costura</p><p>Organiza ordens de serviço, agenda, clientes e financeiro do ateliê.</p></article>
+      <article class="card rv"><h3>Motors</h3><p class="for">Para oficinas mecânicas</p><p>Reúne a gestão da oficina em um ERP com inteligência aplicada.</p></article>
+      <article class="card rv"><h3>Barber</h3><p class="for">Para barbearias</p><p>Organiza a agenda e a gestão da barbearia.</p></article>
+      <article class="card rv"><h3>Frota</h3><p class="for">Para locadoras que alugam veículos a motoristas de aplicativo</p><p>Reúne a gestão da frota em um só lugar: veículos, contratos e agenda.</p></article>
+      <article class="card rv"><h3>Money</h3><p class="for">Para quem quer controle financeiro pessoal</p><p>Controla parcelamentos, cartões e investimentos, com a visão do ano inteiro.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="casos" class="light" aria-labelledby="t-casos">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker">Feito pela VIZIO</span>
+      <h2 id="t-casos">Operações que já trabalham dentro de um sistema VIZIO.</h2>
+    </div>
+    <div class="grid cs">
+      <article class="card case rv"><div class="who">Inovar Formaturas</div><h3>Gestão de formaturas</h3><p>Turmas, formandos, financeiro, cobrança e portal do formando em um só sistema.</p><ul><li>Turmas</li><li>Formandos</li><li>Financeiro</li><li>Cobrança</li><li>Portal do formando</li></ul></article>
+      <article class="card case rv"><div class="who">Elite Consultoria e Consórcios</div><h3>Gestão de cotas</h3><p>Carteira de clientes, parcelas, agenda e portal para o cliente final acompanhar o próprio processo.</p><ul><li>Carteira de clientes</li><li>Parcelas</li><li>Agenda</li><li>Portal do cliente</li></ul></article>
+      <article class="card case rv"><div class="who">Costureira Salvador</div><h3>Ateliê Manager</h3><p>Ordens de serviço, agenda, clientes e financeiro do ateliê organizados no sistema.</p><ul><li>Ordens de serviço</li><li>Agenda</li><li>Clientes</li><li>Financeiro</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="dark" aria-labelledby="t-como">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="kicker">Como funciona</span>
+      <h2 id="t-como">Da planilha ao sistema em três passos.</h2>
+    </div>
+    <div class="grid st">
+      <article class="step rv">
+        <h3>Conversa sobre a rotina</h3>
+        <p>Entendemos como o trabalho acontece hoje, na sua planilha e no seu dia a dia.</p>
+      </article>
+      <article class="step rv">
+        <h3>Sistema desenhado sob medida</h3>
+        <p>Construímos o sistema para a sua operação e migramos os seus dados para ele.</p>
+      </article>
+      <article class="step rv">
+        <h3>No ar, no celular e no computador</h3>
+        <p>O sistema entra em uso nos dois aparelhos e a sua equipe recebe o treinamento.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="guia" class="white" aria-labelledby="t-guia">
+  <div class="wrap">
+    <div class="guide rv">
+      <div>
+        <span class="kicker">Guia gratuito</span>
+        <h2 id="t-guia">7 sinais de que a sua planilha virou gargalo</h2>
+        <p>Um roteiro curto para você reconhecer, na sua própria rotina, o momento de passar da planilha para um sistema.</p>
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1-r2Oe2tSqTwPerO84FF7PJeweBEPUXHq/view" target="_blank" rel="noopener">Abrir o guia gratuito</a>
+      </div>
+      <div class="sheet" aria-hidden="true"><b>7</b><span>sinais</span><i></i><i style="width:80%"></i><i style="width:90%"></i><i style="width:60%"></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="final dark" aria-labelledby="t-final">
+  <div class="wrap">
+    <h2 id="t-final" class="rv">Vamos conversar sobre o seu projeto?</h2>
+    <p class="lede rv">Conte como a sua operação funciona hoje. A resposta chega pelo WhatsApp.</p>
+    <div class="ctas rv">
+      <a class="btn btn-primary" href="https://wa.me/5571991684231?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20VIZIO%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/inpersonaltec/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="VIZIO, voltar ao topo">
+      <svg viewBox="0 0 128 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="bg" x1="64" y1="20" x2="104" y2="118" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8FC2FF"/><stop offset=".5" stop-color="#3C94FC"/><stop offset="1" stop-color="#1C64F0"/></linearGradient></defs><path d="M 48.08,137.35 L 48.08,138.58 L 50.38,140.74 L 51.69,140.90 L 52.18,141.67 L 55.14,142.75 L 57.44,144.44 L 58.58,144.60 L 59.08,145.37 L 60.55,145.52 L 61.05,146.30 L 62.69,146.60 L 66.30,146.30 L 68.59,144.60 L 69.74,144.44 L 70.24,143.67 L 71.55,143.52 L 72.04,142.75 L 76.64,140.74 L 78.93,138.73 L 78.93,136.42 L 77.46,134.88 L 75.16,134.88 L 69.25,138.43 L 67.77,138.73 L 67.28,139.51 L 66.30,139.51 L 65.48,140.43 L 64.33,140.59 L 61.54,140.43 L 57.44,137.81 L 56.29,137.65 L 55.79,136.88 L 54.48,136.73 L 53.66,135.80 L 52.68,135.80 L 51.86,134.88 L 49.89,135.03 Z" fill="#3C94FC"/><path d="M 3.94,111.11 L 2.79,113.12 L 2.79,114.66 L 4.27,116.67 L 5.42,116.82 L 6.24,117.75 L 10.50,119.60 L 10.99,120.37 L 12.31,120.52 L 14.93,122.38 L 15.92,122.38 L 18.22,124.07 L 19.36,124.23 L 19.86,125.00 L 21.17,125.15 L 21.66,125.93 L 26.26,127.93 L 27.08,128.86 L 28.06,128.86 L 28.55,129.63 L 29.87,129.78 L 30.85,130.71 L 33.31,130.86 L 35.45,129.32 L 35.45,127.01 L 34.30,125.77 L 32.98,125.62 L 27.24,122.07 L 24.12,120.99 L 23.63,120.22 L 22.48,120.06 L 20.35,118.36 L 19.04,118.21 L 18.54,117.44 L 13.78,115.28 L 13.29,114.51 L 12.14,114.51 L 11.65,113.73 L 7.06,111.73 L 6.56,110.96 Z" fill="#3C94FC"/><path d="M 48.57,102.47 L 48.90,104.17 L 50.22,105.56 L 51.69,105.71 L 53.83,107.41 L 55.14,107.56 L 55.63,108.33 L 56.94,108.49 L 57.44,109.26 L 58.75,109.41 L 59.24,110.19 L 60.55,110.34 L 61.21,111.27 L 62.36,111.27 L 63.34,112.04 L 66.30,111.11 L 68.59,109.41 L 69.58,109.41 L 70.24,108.49 L 71.55,108.33 L 72.04,107.56 L 73.35,107.41 L 73.68,106.79 L 76.64,105.56 L 78.93,103.24 L 78.77,101.39 L 76.96,99.69 L 75.16,99.69 L 69.25,103.24 L 65.97,104.48 L 65.48,105.25 L 64.33,105.40 L 61.87,105.25 L 61.37,104.48 L 60.23,104.32 L 59.73,103.55 L 58.42,103.40 L 57.93,102.62 L 56.62,102.47 L 55.79,101.54 L 54.81,101.54 L 54.15,100.77 L 52.68,100.46 L 52.02,99.69 L 50.22,99.85 L 49.07,100.93 Z" fill="#3C94FC"/><path d="M 3.77,77.78 L 2.95,80.09 L 4.10,82.41 L 5.42,82.56 L 5.91,83.33 L 7.22,83.49 L 11.16,86.11 L 14.28,87.19 L 14.77,87.96 L 17.56,89.04 L 18.05,89.81 L 21.01,90.90 L 24.78,93.52 L 26.09,93.67 L 26.58,94.44 L 27.90,94.60 L 32.00,97.22 L 34.79,97.38 L 36.43,95.99 L 36.43,93.36 L 34.13,91.51 L 29.70,89.51 L 29.21,88.73 L 27.90,88.58 L 25.27,86.73 L 24.29,86.73 L 22.15,85.03 L 20.84,84.88 L 20.35,84.10 L 17.39,83.02 L 15.26,81.33 L 12.31,80.25 L 11.49,79.32 L 10.34,79.17 L 6.40,76.70 L 5.09,76.70 Z" fill="#3C94FC"/><path d="M 2.79,39.04 L 2.79,56.02 L 4.10,57.41 L 7.88,56.94 L 8.53,45.68 L 10.01,45.52 L 46.93,65.74 L 50.22,63.73 L 50.22,61.42 L 48.90,60.03 L 38.73,55.25 L 7.38,37.65 L 5.09,37.35 Z" fill="#3C94FC"/><path d="M 124.06,111.88 L 122.75,110.80 L 120.45,110.96 L 92.88,125.93 L 91.41,127.47 L 91.73,129.94 L 93.54,131.48 L 95.02,131.48 L 121.60,117.44 L 124.06,115.28 Z" fill="url(#bg)"/><path d="M 124.06,77.93 L 122.75,76.70 L 120.78,76.70 L 94.19,90.74 L 90.58,93.21 L 90.58,96.14 L 92.55,97.84 L 93.70,97.84 L 121.76,83.33 L 124.06,81.48 Z" fill="url(#bg)"/><path d="M 123.90,38.12 L 122.09,36.88 L 120.62,37.04 L 81.39,58.18 L 76.80,61.27 L 76.80,64.20 L 78.44,65.74 L 80.08,65.74 L 116.68,45.99 L 118.15,46.14 L 118.65,56.48 L 120.62,57.87 L 123.08,57.41 L 124.23,55.86 Z" fill="url(#bg)"/><path d="M 23.14,25.46 L 23.63,28.24 L 26.58,29.48 L 60.23,11.27 L 64.66,10.03 L 101.58,29.48 L 105.03,27.16 L 104.04,24.07 L 64.82,3.40 L 62.03,3.55 L 25.44,23.15 Z" fill="url(#bg)"/></svg>
+      <b>VIZIO</b>
+    </a>
+    <p class="sig">VIZIO · um produto INPERSON · Salvador/BA</p>
+    <div class="links">
+      <a href="https://inpersonaltec.com.br/">inpersonaltec.com.br</a>
+      <a href="https://www.instagram.com/inpersonaltec/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/5571991684231?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20VIZIO%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p>Sua planilha virou software.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},4000);
+})();
+</script>
+</body>
+</html>
